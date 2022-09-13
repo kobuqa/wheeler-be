@@ -1,12 +1,12 @@
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const express = require('express')
 
 require('dotenv').config()
-const { PORT } = process.env;
+// const { PORT } = process.env;
 
 const app = express();
 
-app.use(bodyParser)
+// app.use(bodyParser)
 
 
 app.get('/api', (req, res) => {
