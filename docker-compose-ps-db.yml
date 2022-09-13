@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  node-postgres-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_pass
+    ports:
+      - 5432:5432
+
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
