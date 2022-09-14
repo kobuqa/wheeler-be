@@ -1,13 +1,9 @@
 const express = require('express')
+
+const commonController = require('../controllers/common')
+
 const router = express.Router()
 
-
-router.get('/catalog', (req, res) => {
-    res.render('catalog')
-});
-
-router.get('/', (req, res) => {
-    res.render('main')
-});
+router.get('/', commonController.getIndex);
 
 module.exports = router
